@@ -1,0 +1,23 @@
+name: "Falcon-7b_a106f8a48adc4885b0322903cdc640f9"
+backend: "python"
+input [
+  {
+    name: "prompt"
+    data_type: TYPE_STRING	
+    dims: [-1]
+  }
+]
+output [
+  {
+    name: "generated_text"
+    data_type: TYPE_STRING	
+    dims: [-1]
+  }
+]
+
+instance_group [
+  {
+    kind: KIND_GPU
+  }
+]
+
